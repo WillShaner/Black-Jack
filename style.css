@@ -3,21 +3,20 @@
     diamonds = &#x2666 or &diams
     clubs = &#x2663 or &clubsuit*/
 body {
-    background-color: green;
+    background-color: rgb(200, 197, 197);
 
 }
 .container-fluid {
-    background-image: url(download.jpeg);
+    /*background-image: url(download.jpeg);*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
     text-align: center;
-    max-width: 1000px;
-    color: white;
+    max-width: 500px;
+    background-color: rgb(6, 96, 19);
 }
 .dark{
     background-color: #222;
-    color: white;
 }
 #table {
     background-image: url(download.jpeg);
@@ -39,5 +38,8 @@ body {
     height: 175px;
     width: 125px;
     margin: 1px
-
+}
+#results {
+    color: white;
+    font-size: 22px;
 }

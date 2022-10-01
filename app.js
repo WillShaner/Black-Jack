@@ -67,19 +67,19 @@ function stay() {
     document.getElementById("hidden").src = "./cards/" + hidden + ".png";
     let message = "";
     if (yourSum > 21) {
-        message = "you lose"
+        message = "YOU LOSE!"
     }
     else if(dealerSum > 21) {
-        message = "you win"
+        message = "YOU WIN!"
     }
     else if(yourSum == dealerSum) {
-        message = "Tie!"
+        message = "TIE!"
     }
     else if(yourSum > dealerSum) {
-        message = "you win"
+        message = "YOU WIN!"
     }
     else if (yourSum < dealerSum) {
-        message = "you lose"
+        message = "YOU LOSE!"
     }
     document.getElementById("results").innerText = message;
     document.getElementById("dealerSum").innerText = dealerSum;
@@ -88,7 +88,7 @@ function stay() {
 }
 
 function hit() {
-    if(!canHit) {
+    if(canHit == false) {
         return
     }
     let cardImg = document.createElement("img");
