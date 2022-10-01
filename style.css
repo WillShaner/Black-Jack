@@ -1,0 +1,43 @@
+/* spade = &#x2660
+    hearts = &#x2665 or &hearts
+    diamonds = &#x2666 or &diams
+    clubs = &#x2663 or &clubsuit*/
+body {
+    background-color: green;
+
+}
+.container-fluid {
+    background-image: url(download.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+    text-align: center;
+    max-width: 1000px;
+    color: white;
+}
+.dark{
+    background-color: #222;
+    color: white;
+}
+#table {
+    background-image: url(download.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+.redCard {
+  color: red;
+    font-weight: bold;   
+}
+#dealerCards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px
+
+}
+#yourCards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel ="stylesheet" type = "text/css" href="style.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row pt-5 justify-content-center d-flex flex-column">
+            <h1 class="pr-5">&#x2660<span class="redCard">♦</span><span class="text-white">Black</span></h1>
+            <h1 class="text-black pl-5">Jack &#x2663<span class="redCard">♥</span></h1>
+        </div>
+        <button type="button" class="btn btn-secondary px-5 my-5" onclick="myFunction()" id="darkMode">DARK<br>MODE</button>
+
+        <div class="row pt-3 justify-content-center d-flex flex-column">
+            <h2>Dealer: <span id="dealerSum"></span></h2>
+            <div id="dealerCards">
+                <img id="hidden" alt="beginning card" src="./cards/back.png">
+            </div>
+            <h2>You: <span id="yourSum"></span></h2>
+            <div id="yourCards"></div>
+            <br>
+            <p id="results"></p>
+        </div>
+        <div class="container pb-5 justify-content-center">
+            <div class="row pb-5 justify-content-center">
+                <button class="px-5 py-3 btn btn-success mr-3" id="hit" type="button">Hit</button>
+                <button class="px-5 py-3 btn btn-dark ml-3" id="stay"type="button">Keep</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js">
+    </script>
+</body>
+</html>
