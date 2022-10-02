@@ -11,13 +11,12 @@
 <body>
 
     <div class="container-fluid">
-        <div class="row pt-5 justify-content-center d-flex flex-column">
+        <div class="row py-3 justify-content-center d-flex flex-column">
             <h1 class="pr-5">&#x2660<span class="redCard">♦</span><span class="text-white">Black</span></h1>
             <h1 class="text-black pl-5">Jack &#x2663<span class="redCard">♥</span></h1>
         </div>
-        <button type="button" class="btn btn-secondary px-5 my-5" onclick="myFunction()" id="darkMode">DARK<br>MODE</button>
 
-        <div class="row pt-3 justify-content-center d-flex flex-column">
+        <div class="row pt-2 justify-content-center d-flex flex-column">
             <h2 class="text-white">Dealer: <span id="dealerSum"></span></h2>
             <div id="dealerCards">
                 <img id="hidden" alt="beginning card" src="./cards/back.png">
@@ -27,11 +26,15 @@
             <br>
             <p id="results"></p>
         </div>
-        <div class="container pb-5 justify-content-center">
+        <div class="container pb-2 justify-content-center">
             <div class="row pb-5 justify-content-center">
                 <button class="px-5 py-3 btn btn-success mr-3" id="hit" type="button">Hit</button>
-                <button class="px-5 py-3 btn btn-dark ml-3" id="stay" type="button">Keep</button>
+                <button class="px-5 py-3 btn btn-dark ml-3" id="stay" type="button">Stay</button>
             </div>
+        </div>
+        <div class="row pb-5 justify-content-around">
+            <button id="restartButton" class="btn btn-secondary px-5 mr-3" onclick="window.location.reload();">RESTART<br>GAME</button>
+            <button type="button" class="btn btn-secondary px-5 ml-3" onclick="myFunction()" id="darkMode">DARK<br>MODE</button>
         </div>
     </div>
     <script src="app.js">
