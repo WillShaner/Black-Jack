@@ -43,8 +43,8 @@ function gameStart() {
         yourAceCount += checkAce(card);
         document.getElementById("yourCards").append(cardImg)
     }
-    document.getElementById("hit").addEventListener("click", hit)
-    document.getElementById("stay").addEventListener("click", stay)
+    document.getElementById("hit").addEventListener("click", hit);
+    document.getElementById("stay").addEventListener("click", stay);
 
 }
 function stay() {
@@ -85,8 +85,9 @@ function stay() {
 }
 
 function hit() {
-    if(reduceAce(yourSum, yourAceCount) >= 21) {
+    if(reduceAce(yourSum, yourAceCount) > 21) {
         canHit = false
+        stay()
         return
     }
 
