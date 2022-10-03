@@ -10,7 +10,6 @@ var yourAceCount = 0;
 
 var hidden;
 var deck;
-var canHit = true;
 function myFunction() {
     var element = document.body;
     element.classList.toggle("dark");
@@ -34,7 +33,6 @@ function gameStart() {
         dealerAceCount += checkAce(card);
         document.getElementById("dealerCards").append(cardImg)
     
-
     for(i=0; i < 2; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop()
@@ -45,13 +43,10 @@ function gameStart() {
     }
     document.getElementById("hit").addEventListener("click", hit);
     document.getElementById("stay").addEventListener("click", stay);
-
 }
 function stay() {
     dealerSum = reduceAce(dealerSum, dealerAceCount);
     yourSum = reduceAce(yourSum, yourAceCount);
-
-    canHit = false;
     document.getElementById("hidden").src = "./cards/" + hidden + ".png";
     while(dealerSum < 17) {
         //creating an image
@@ -82,21 +77,21 @@ function stay() {
     document.getElementById("dealerSum").innerText = dealerSum;
     document.getElementById("yourSum").innerText = yourSum;
     document.getElementById("restartButton").disabled = false;
+    document.getElementById("hit").disabled = true
 }
 
 function hit() {
-    if(reduceAce(yourSum, yourAceCount) > 21) {
-        canHit = false
-        stay()
-        return
-    }
-
     let cardImg = document.createElement("img");
     let card = deck.pop()
     cardImg.src= "./cards/" + card + ".png"
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
     document.getElementById("yourCards").append(cardImg)
+    if(reduceAce(yourSum, yourAceCount) >= 21) {
+        document.getElementById("hit").disabled = true
+        stay()
+        return
+    }
 }
 function buildDeck() {
     let values = ["ace", "2", "3", "4", "5" ,"6" , "7", "8", "9", "10", "jack", "queen", "king"];
